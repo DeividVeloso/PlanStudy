@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
-import {Button, Icon} from 'react-materialize';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import RaisedButton from 'material-ui/RaisedButton';
+
+
+const style = {
+    margin: 50
+};
 
 export default class App extends Component {
+
   render() {
     return (
-      <div>
-        React simple starter
-        <Button node='a' waves='light'><Icon right>file_cloud</Icon>button</Button>
-        <Button floating large className='red' waves='light' icon='add' />
-      </div>
+      <MuiThemeProvider>
+         <RaisedButton label="Meu" primary={true} style={style} />
+      </MuiThemeProvider>
     );
   }
 }
+
+
+
